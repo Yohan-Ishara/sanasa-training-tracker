@@ -1,6 +1,6 @@
 package com.sanasa.trainingtracker.controllers;
 
-import com.sanasa.trainingtracker.entities.TrainingProgram;
+import com.sanasa.trainingtracker.entities.Training;
 import com.sanasa.trainingtracker.service.TrainingProgramService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -15,24 +15,20 @@ public class TrainingProgramController {
     private final TrainingProgramService trainingService;
 
     @PostMapping
-    public TrainingProgram create(@RequestBody TrainingProgram training) {
+    public Training create(@RequestBody Training training) {
         return trainingService.saveTraining(training);
     }
 
     @GetMapping
-    public List<TrainingProgram> getAll() {
+    public List<Training> getAll() {
         return trainingService.getAllTrainings();
     }
 
     @GetMapping("/{id}")
-    public TrainingProgram getById(@PathVariable Long id) {
+    public Training getById(@PathVariable Long id) {
         return trainingService.getTrainingById(id);
     }
 
-    @GetMapping("/type/{type}")
-    public List<TrainingProgram> getByType(@PathVariable String type) {
-        return trainingService.getTrainingsByType(type);
-    }
 
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Long id) {

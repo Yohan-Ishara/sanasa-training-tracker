@@ -8,23 +8,16 @@ import java.util.List;
 
 @Entity
 @Table(name = "roles")
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 public class Role {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, unique = true)
-    private String roleName; // e.g., Cluster Manager, SPO, Branch Manager
-
-    private Integer roleLevel; // Optional: hierarchy level
-
-    @OneToMany(mappedBy = "role", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JsonBackReference
-    private List<Staff> staffList;
+    private String roleName;     // e.g., "Channel Head"
+    private Integer roleLevel;   // hierarchical level (optional)
 }
+

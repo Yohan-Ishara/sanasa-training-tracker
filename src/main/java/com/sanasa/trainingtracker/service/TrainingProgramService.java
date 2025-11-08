@@ -1,13 +1,12 @@
 package com.sanasa.trainingtracker.service;
 
-import com.sanasa.trainingtracker.entities.TrainingProgram;
+import com.sanasa.trainingtracker.entities.Training;
 
 import java.util.List;
 
 public interface TrainingProgramService {
-    TrainingProgram saveTraining(TrainingProgram training);
-    List<TrainingProgram> getAllTrainings();
-    TrainingProgram getTrainingById(Long id);
-    List<TrainingProgram> getTrainingsByType(String type);
+    Training saveTraining(Training training);
+    List<Training> getAllTrainings();
+    Training getTrainingById(Long id);
     void deleteTraining(Long id);
 }

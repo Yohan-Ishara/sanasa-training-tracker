@@ -20,7 +20,7 @@ public class AttendanceServiceImpl implements AttendanceService {
 
     @Override
     public List<Attendance> getAttendanceByTraining(Long trainingId) {
-        return attendanceRepository.findByTrainingProgram_Id(trainingId);
+        return attendanceRepository.findByTraining_Id(trainingId);
     }
 
     @Override
