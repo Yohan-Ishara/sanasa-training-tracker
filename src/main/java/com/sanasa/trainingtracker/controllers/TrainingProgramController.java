@@ -1,4 +1,4 @@
-package com.sanasa.trainingtracker.controller;
+package com.sanasa.trainingtracker.controllers;
 
 import com.sanasa.trainingtracker.entities.TrainingProgram;
 import com.sanasa.trainingtracker.service.TrainingProgramService;
