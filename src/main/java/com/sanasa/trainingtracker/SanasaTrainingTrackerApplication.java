@@ -1,4 +1,4 @@
-package com.sanasa.sanasatrainingtracker;
+package com.sanasa.trainingtracker;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
