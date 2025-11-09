@@ -1,5 +1,7 @@
 package com.sanasa.trainingtracker.entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -29,6 +31,7 @@ public class Staff {
     private Role role;
 
     @OneToMany(mappedBy = "staff", cascade = CascadeType.ALL)
+    @JsonBackReference
     private List<Attendance> attendances;
 }
 

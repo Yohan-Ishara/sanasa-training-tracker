@@ -1,6 +1,8 @@
 package com.sanasa.trainingtracker.repository;
 
 import com.sanasa.trainingtracker.entities.Attendance;
+import com.sanasa.trainingtracker.entities.Staff;
+import com.sanasa.trainingtracker.entities.Training;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -12,4 +14,5 @@ public interface AttendanceRepository extends JpaRepository<Attendance, Long> {
     List<Attendance> findByStatus(String status);
 
     List<Attendance> findByTraining_Id(Long trainingId);
+    boolean existsByStaffAndTraining(Staff staff, Training training);
 }

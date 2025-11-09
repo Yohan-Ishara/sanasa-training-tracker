@@ -9,4 +9,6 @@ public interface    AttendanceService {
     List<Attendance> getAttendanceByTraining(Long trainingId);
     List<Attendance> getAttendanceByStaff(Long staffId);
     List<Attendance> getAttendanceByStatus(String status);
+    List<Attendance> assignParticipants(Long trainingId, List<Long> staffIds);
+    Attendance updateAttendeeStatus(Long id, String status);
 }
