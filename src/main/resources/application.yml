@@ -8,10 +8,10 @@ spring:
     name: sanasa-training-tracker
 
   datasource:
-    url: postgresql://postgres:ocIIVuYiNFrTJPaCWJUFElKQuoXSLfcf@postgres.railway.internal:5432/railway
     username: postgres
     password: ocIIVuYiNFrTJPaCWJUFElKQuoXSLfcf
     driver-class-name: org.postgresql.Driver
+    url: postgresql://postgres:ocIIVuYiNFrTJPaCWJUFElKQuoXSLfcf@maglev.proxy.rlwy.net:16682/railway
 
   jpa:
     hibernate:
