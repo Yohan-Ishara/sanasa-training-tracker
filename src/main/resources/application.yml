@@ -8,9 +8,9 @@ spring:
     name: sanasa-training-tracker
 
   datasource:
-    url: ${DATABASE_URL}
-    username: ${POSTGRES_USER}
-    password: ${POSTGRES_PASSWORD}
+    url: postgresql://postgres:ocIIVuYiNFrTJPaCWJUFElKQuoXSLfcf@postgres.railway.internal:5432/railway
+    username: postgres
+    password: ocIIVuYiNFrTJPaCWJUFElKQuoXSLfcf
     driver-class-name: org.postgresql.Driver
 
   jpa:
